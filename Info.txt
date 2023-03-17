@@ -1,0 +1,33 @@
+Ambiente:
+https://dotnet.microsoft.com/en-us/download/dotnet/5.0 (5.0.13 e 5.0.2)
+https://nodejs.org/en (Necessario para instalar o Angular)
+npm install -g @angular/cli@12
+VSCode
+https://www.postman.com/downloads
+
+Global.json:
+https://learn.microsoft.com/pt-br/dotnet/core/tools/global-json
+Criando por linha de comando: dotnet new globaljson --sdk-version 5.0.102 --force
+Versão do projeto 5.0.102
+Determina a versão do dotnet
+Comando para listagem dotnet --list-sdks 
+Comando para versão atual dotnet --version
+
+Criando Projeto:
+dotnet new - varios projetos
+dotnet new webapi -n ProEventos.API
+dotnet run - vai dar building e vai mostrar as portas 
+Em dotnet6 o conteudo dos controlers não precisa ficar dentro das chaves do nomespace
+Caso de erro no https - dotnet dev-certs https --trust
+dotnet watch run - não precisa ficar parando a aplicação 
+
+Arquivos do projeto:
+Program.cs - primeiro arquivo a executar
+appsettings.json - Ambiente cliente
+appsettings.Development.json - Ambiente desenvolvimento / caso queira ver todas as ações mude o json para "Microsoft": "Information"
+swagger são os contatos da sua api se quiser enviar pro seu dev front
+
+Git:
+dotnet new gitignore
+git init
+Aula 21
