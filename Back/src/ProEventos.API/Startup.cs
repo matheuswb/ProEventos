@@ -33,6 +33,7 @@ namespace ProEventos.API
             ); /*Remete a string de conexão do banco de dados configurada no appsettings */
 
             services.AddControllers(); //Vai retornar o controler
+            services.AddCors(); // Permissão de requisição
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });
@@ -54,6 +55,10 @@ namespace ProEventos.API
             app.UseRouting(); //Vai retornar o controler da rota que eu colocar
 
             app.UseAuthorization();
+
+            app.UseCors(cors => cors.AllowAnyHeader()
+                                    .AllowAnyMethod()
+                                    .AllowAnyOrigin()); //Dado um acesso eu devolvo isto
 
             app.UseEndpoints(endpoints =>
             {
